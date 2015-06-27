@@ -27,7 +27,7 @@ module Receta
 
     config.assets.precompile << %r(.*.(?:eot|svg|ttf|woff)$)
     config.assets.precompile += %w( bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2 )
-###+
+    config.assets.precompile += %w( bootstrap/glyphicons-halflings-regular.woff2 )
 
 
     # Do not swallow errors in after_commit/after_rollback callbacks.

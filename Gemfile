@@ -20,6 +20,7 @@ gem 'jquery-rails'
 ###+
 gem 'bower-rails'
 gem 'angular-rails-templates'
+gem 'sprockets', '~> 2.0'
 ###+
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
