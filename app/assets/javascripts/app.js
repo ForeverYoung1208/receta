@@ -41,6 +41,15 @@
 		}
 	]);
 
+	controllers.controller('MyController', ['$scope',
+		function($scope){
+			this.fixedName='';
+			this.setFixedName = function(newName){
+				this.fixedName = newName;
+			};
+		}
+	]);
+
 
 
 

@@ -1,17 +1,23 @@
 <div class = "container-fluid" ng-app="receta">
 
-	<div class = "panel-success row" >
-		<h1 class="col-md-6 col-md-offset-3 text-center">	Hello, {{name}} </h1>
-	</div>
-	<div class = "panel-body row col-md-6 col-md-offset-3">
-		<form >
-			<div class="form-group ">
-					<input class= "form-control" type="text" placeholder="Enter your name" autofocus ng-model="name">
-			</div>
-			<button type="submit" class="btn btn-warning">submit</button>
+	<section ng-controller='MyController as MC' >
+		<div class = "panel-success row">
 
-		</form>
-	</div>
+			<h6 class="col-md-6 col-md-offset-3"> FixedName: {{MC.fixedName}} </h6>
+			<h1 class="col-md-6 col-md-offset-3 text-center">	Hello, {{MC.name}} </h1>
+
+
+		</div>
+		<div class = "panel-body row col-md-6 col-md-offset-3">
+			<form >
+				<div class="form-group ">
+						<input class= "form-control" type="text" placeholder="Enter your name" autofocus ng-model="MC.name">
+				</div>
+				<button type="submit" class="btn btn-warning" ng-click="MC.setFixedName(MC.name)" >submit</button>
+
+			</form>
+		</div>
+	</section>
 
 	</hr>
 
