@@ -1,6 +1,10 @@
 (function(){
 
-	var app = angular.module('receta',['ngRoute']);
+	var app = angular.module('receta',[
+		'ngRoute',
+		'templates',
+		'controller'
+	]);
 
 	app.config(['$routeProvider',
 		function($routePrivider){
@@ -16,11 +20,12 @@
 		}
 	]);
 
-	app.controller('indexAngController',function($scope){
-		$scope.name='fffffffffffffffff'
-	});
 
-	app.controller('newAngController',function(){
+	controllers = angular.module('controllers',[])
+
+
+	controllers.controller('RecipesController',function($scope){
+		
 
 	});
 
