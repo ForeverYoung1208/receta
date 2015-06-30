@@ -1,28 +1,11 @@
 == README
+-----------
+Хост по умолчанию для rails server
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Из-за изменения в Rack, по умолчанию rails server теперь ждет запросов на localhost вместо 0.0.0.0. Это минимально затрагивает стандартный процесс разработки, так как и http://127.0.0.1:3000, и http://localhost:3000 будут работать, как и прежде на вашей машине.
 
-Things you may want to cover:
+Однако, это изменение не позволяет доступ к серверу Rails с другой машины, например, если ваша среда разработки в виртуальной машине, и вы хотите доступ к ней с хоста. В таких случаях запускайте сервер с помощью rails server -b 0.0.0.0, чтобы восстановить старое поведение.
 
-* Ruby version
+Если так сделаете, не забудьте правильно настроить свой фаирволл, чтобы только доверенные машины вашей сети имели доступ к вашему серверу разработки.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+-------------

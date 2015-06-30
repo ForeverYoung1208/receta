@@ -2,6 +2,7 @@
 
 	var app = angular.module('receta',[
 		'ngRoute',
+		'ngResource',
 		'templates',
 		'controllers'
 	]);
@@ -23,8 +24,8 @@
 
 	controllers = angular.module('controllers',[])
 
-	controllers.controller('RecipesController',['$scope', '$routeParams', '$location', 
-		function($scope, $routeParams, $location){
+	controllers.controller('RecipesController',['$scope', '$routeParams', '$location', '$resource'
+		function($scope, $routeParams, $location, $resource){
 
 			$scope.search = function(keywords){
 				return $location.path("/").search('keywords', keywords)
