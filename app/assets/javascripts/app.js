@@ -24,7 +24,7 @@
 
 	controllers = angular.module('controllers',[])
 
-	controllers.controller('RecipesController',['$scope', '$routeParams', '$location', '$resource'
+	controllers.controller('RecipesController',['$scope', '$routeParams', '$location', '$resource',
 		function($scope, $routeParams, $location, $resource){
 
 			$scope.search = function(keywords){
