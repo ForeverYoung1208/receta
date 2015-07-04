@@ -29,6 +29,12 @@ module Receta
     config.assets.precompile += %w( bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2 )
     config.assets.precompile += %w( bootstrap/glyphicons-halflings-regular.woff2 )
 
+    config.assets.precompile += %w( 
+      teaspoon.css
+      teaspoon-teaspoon.js
+      teaspoon-jasmine.js
+    )
+
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true

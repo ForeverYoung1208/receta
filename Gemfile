@@ -51,6 +51,7 @@ group :development, :test do
   gem "selenium-webdriver"
   gem 'teaspoon-jasmine'
   gem 'phantomjs'  
+#  gem 'phantomjs-linux'
   
 end
 
