@@ -24,36 +24,6 @@
 
 	controllers = angular.module('controllers',[])
 
-	controllers.controller('RecipesController',['$scope', '$routeParams', '$location', '$resource',
-		function($scope, $routeParams, $location, $resource){
-
-			$scope.search = function(keywords){
-				return $location.path("/").search('keywords', keywords)
-			};
-
-			if ($routeParams.keywords){
-				keywords = $routeParams.keywords.toLowerCase();
-				return $scope.recipes = recipes.filter(function(recipe){
-					return recipe.name.toLowerCase().indexOf(keywords) != -1
-				});
-			} else {
-				return $scope.recipes = [];
-			}
-		}
-	]);
-
-	controllers.controller('MyController', ['$scope',
-		function($scope){
-			this.fixedName='';
-			this.setFixedName = function(newName){
-				this.fixedName = newName;
-			};
-		}
-	]);
-
-
-
-
 
 	recipes = [
   {
