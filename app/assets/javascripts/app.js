@@ -4,7 +4,9 @@
 		'ngRoute',
 		'ngResource',
 		'templates',
-		'controllers'
+		'controllers',
+	  'angular-flash.service',
+	  'angular-flash.flash-alert-directive'		
 	]);
 
 	app.config(['$routeProvider',
