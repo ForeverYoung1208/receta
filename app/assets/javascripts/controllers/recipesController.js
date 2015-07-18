@@ -20,6 +20,11 @@ controllers = angular.module('controllers')
 			} else {
 				return $scope.recipes = [];
 			}
+
+			$scope.view = function (recipeId){
+				$location.path("/recipes/#{recipeId}");
+			}
+			
 		}
 	]);
 
