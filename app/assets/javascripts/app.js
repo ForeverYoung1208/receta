@@ -17,7 +17,11 @@
 				{ 
 					templateUrl: "new.html",
 					controller: 'RecipesController'
-				});
+				}).when('/recipes/:recipeId',
+				{
+	        templateUrl: "show.html",
+	        controller: 'RecipeController'
+        });
 		}
 	]);
 
