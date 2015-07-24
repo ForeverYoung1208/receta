@@ -42,7 +42,7 @@ describe RecipesController do
 
 	end
 
-  skip "GET 'index'" do
+  describe "GET 'index'" do
     it "returns http success" do
       get 'index'
       response.should be_success

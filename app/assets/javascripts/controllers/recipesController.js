@@ -22,7 +22,7 @@ controllers = angular.module('controllers')
 			}
 
 			$scope.view = function (recipeId){
-				$location.path("/recipes/#{recipeId}");
+				$location.path("/recipes/" + recipeId);
 			}
 			
 		}
